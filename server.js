@@ -21,6 +21,7 @@ db.sequelize.sync().then(function() {
 	});
 })
 
+server.use(restify.bodyParser());
 server.use(restifyPlugins.jsonBodyParser({ mapParams: true }));
 server.use(restifyPlugins.acceptParser(server.acceptable));
 server.use(restifyPlugins.queryParser({ mapParams: true }));

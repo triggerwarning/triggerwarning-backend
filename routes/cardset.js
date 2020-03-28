@@ -1,4 +1,5 @@
-var CardSet = require('../models/cardset')
+var models = require('../models');
+var CardSet = models.CardSet;
 
 module.exports = function(server) {
 	server.get('/api/cardset', function(req, res, next) {

@@ -1,14 +1,14 @@
-var models = require('../models')
+var CardSet = require('../models/cardset')
 
 module.exports = function(server) {
 	server.get('/api/cardset', function(req, res, next) {
-		models.CardSet.findAll().then(function(cardsets) {
+		CardSet.findAll().then(function(cardsets) {
 			res.send(cardsets)
 		})
 	})
 
 	server.post('/api/cardset', function(req, res, next) {
-		models.CardSet.find({ where: { name: req.body.name } }).success(function(cardset) {
+		CardSet.find({ where: { name: req.body.name } }).success(function(cardset) {
 			if (cardset) {
 				res.send(400, 'A cardset with this name already exists, please change the name or edit the existing cardset')
 			} else {

@@ -1,5 +1,5 @@
-var restify = require('restify');
-	, db    = require('./models')
+var restify = require('restify')
+	, db    = require('./models');
 
 function respond(req, res, next) {
   res.send('hello ' + req.params.name);

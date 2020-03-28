@@ -17,8 +17,12 @@ if (!global.hasOwnProperty('db')) {
     sequelize: sequelize,
     User:      sequelize.import(__dirname + '/user'),
     PromptCard: sequelize.import(__dirname + '/promptcard'),
-    ResponseCard: sequelize.import(__dirname + '/responsecard')
+    ResponseCard: sequelize.import(__dirname + '/responsecard'),
+    CardSet: sequelize.import(__dirname + '/cardset')
   }
+
+  global.db.CardSet.hasMany(global.db.PromptCard)
+  global.db.CardSet.hasMany(global.db.ResponseCard)
 }
 
 module.exports = global.db

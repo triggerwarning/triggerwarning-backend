@@ -1,4 +1,5 @@
 var restify = require('restify');
+	, db    = require('./models')
 
 function respond(req, res, next) {
   res.send('hello ' + req.params.name);
@@ -14,6 +15,8 @@ if (port == null || port == "") {
 	port = 8080
 }
 
-server.listen(port, function() {
-  console.log('%s listening at %s', server.name, server.url);
-});
+db.sequelize.sync().then(function() {
+	server.listen(port, function() {
+	  console.log('%s listening at %s', server.name, server.url);
+	});
+})

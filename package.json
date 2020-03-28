@@ -1,0 +1,25 @@
+{
+  "name": "triggerwarning-backend",
+  "version": "1.0.0",
+  "description": "Backend for the TriggerWarning online card game",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/triggerwarning/triggerwarning-backend.git"
+  },
+  "author": "ChandlersHax",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/triggerwarning/triggerwarning-backend/issues"
+  },
+  "homepage": "https://github.com/triggerwarning/triggerwarning-backend#readme",
+  "dependencies": {
+    "mysql": "^2.18.1",
+    "pg": "^7.18.2",
+    "restify": "^8.5.1",
+    "sequelize": "^5.21.5"
+  }
+}

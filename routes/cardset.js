@@ -8,7 +8,7 @@ module.exports = function(server) {
 	})
 
 	server.post('/api/cardset', function(req, res, next) {
-		CardSet.find({ where: { name: req.body.name } }).success(function(cardset) {
+		CardSet.findOne({ where: { name: req.body.name } }).success(function(cardset) {
 			if (cardset) {
 				res.send(400, 'A cardset with this name already exists, please change the name or edit the existing cardset')
 			} else {

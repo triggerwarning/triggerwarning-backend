@@ -15,8 +15,8 @@ module.exports = function(server) {
 			} else {
 				var promptcard = models.PromptCard.create({
 					text: req.body.text,
-					draw: req.body.draw,
-					pick: req.body.pick
+					draw: req.body.draw || 0,
+					pick: req.body.pick || 1
 				}).then(function(promptcard) {
 					res.send(promptcard)
 				})

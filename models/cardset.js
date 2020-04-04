@@ -6,7 +6,8 @@ module.exports = (sequelize, DataTypes) => {
     vendor: DataTypes.STRING
   }, {});
   CardSet.associate = function(models) {
-    // associations can be defined here
+    CardSet.hasMany(models.PromptCard);
+    CardSet.hasMany(models.ResponseCard);
   };
   return CardSet;
 };

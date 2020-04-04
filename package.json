@@ -19,6 +19,7 @@
   "dependencies": {
     "csv-parser": "^2.3.2",
     "mysql": "^2.18.1",
+    "newrelic": "^6.5.0",
     "pg": "^7.18.2",
     "restify": "^8.5.1",
     "restify-clients": "^2.6.9",

@@ -1,3 +1,4 @@
+require('newrelic');
 var restify = require('restify')
 	, db    = require('./models')
 	, restifyPlugins = require('restify-plugins');
